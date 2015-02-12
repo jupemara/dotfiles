@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ln -s  ${PWD}/.vimrc ~/.vim 
+ln -s  ${PWD}/.vim ~/.vim 
 ln -s  ${PWD}/.vimrc ~/.vimrc 
-ln -s  ${PWD}/.vimrc ~/.bash_profile 
-ln -s  ${PWD}/.vimrc ~/.bash_logout 
-ln -s  ${PWD}/.vimrc ~/.gitconfig 
+ln -s  ${PWD}/.bash_profile ~/.bash_profile 
+ln -s  ${PWD}/.bash_logout ~/.bash_logout 
+ln -s  ${PWD}/.gitconfig ~/.gitconfig 
