@@ -1,9 +1,6 @@
 # Commands Alias
-alias "ls=ls --color=auto"
-alias "ll=ls -lA --color=auto"
 alias "ssh=ssh -A"
 alias "csshx=csshx --ssh_args -A --config ~/.ssh/config"
-alias "vmstart=VBoxManage startvm --type headless"
 
 # Add ssh-key
 eval $(ssh-agent -s)                               >/dev/null 2>&1
@@ -15,23 +12,16 @@ export HISTIGNORE='history:fg*:bg*:pwd'
 
 # set cabal's path
 if [ -e ${HOME}/.cabal/bin ]; then
-    PATH=${HOME}/.cabal/bin:$PATH
+    export PATH=${HOME}/.cabal/bin:$PATH
 fi
 
-# set boxen's path
-if [ -e /opt/boxen ]; then
-    BOXEN_HOME="/opt/boxen"
-    . "$BOXEN_HOME/env.sh"
-fi
+# set BREW_HOME
+BREW_HOME=$(brew --prefix)
+CELLAR=$(brew --cellar)
 
-# set brew's home
-if [ -e ${BOXEN_HOME}/homebrew ]; then
-    BREW_HOME="${BOXEN_HOME}/homebrew"
-fi
-
-# bash-completion2 
-if [ -e ${BREW_HOME}/bin/brew ]; then
-    . $(${BREW_HOME}/bin/brew --prefix)/share/bash-completion/bash_completion
+# bash-completion2
+if [ -d ${CELLAR} ]; then
+    . ${CELLAR}/bash-completion/1.3/etc//bash_completion
 fi
 
 # aws-completion
@@ -41,9 +31,8 @@ fi
 
 # Use coreutils by brew
 if [ -d ${BREW_HOME}/Cellar/coreutils ]; then
-    PATH="${BREW_HOME}/Cellar/coreutils/8.23/libexec/gnubin":$PATH
+    export PATH="${BREW_HOME}/Cellar/coreutils/8.23_1/libexec/gnubin":$PATH
 fi
-export PATH
 
 # python virtualenvwrapper
 if [ -e ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh ]; then
@@ -61,7 +50,7 @@ fi
 if [ -e ${BREW_HOME}/bin/pyenv ]; then
     export PATH="/Users/jumpeiarashi/.pyenv/shims:${PATH}"
     export PYENV_SHELL=bash
-    source '/opt/boxen/homebrew/Cellar/pyenv/20141008/libexec/../completions/pyenv.bash'
+    source ${CELLAR}/pyenv/20150204/completions/pyenv.bash
     pyenv rehash 2>/dev/null
     pyenv() {
         local command
@@ -78,6 +67,10 @@ if [ -e ${BREW_HOME}/bin/pyenv ]; then
         esac
     }
 fi
+
+# Commands Alias in brew
+alias "ls=ls --color=auto"
+alias "ll=ls -lA --color=auto"
 
 # read .bashrc
 if [ -f ~/.bashrc ]; then
