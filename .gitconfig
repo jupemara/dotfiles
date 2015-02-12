@@ -1,6 +1,5 @@
 [core]
-    editor = /opt/boxen/homebrew/bin/vim
-    excludesfile = /opt/boxen/config/git/gitignore
+    editor = /usr/local/bin/vim
 
 [user]
     name = ARASHI, Jumpei
@@ -10,7 +9,6 @@
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 
 [credential]
-    helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
     protocol = https
