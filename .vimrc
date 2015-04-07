@@ -74,7 +74,7 @@ nmap <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " For Python
-autocmd BufNewFile *.py 0r $HOME/.vim/templates/python_shebang
+autocmd BufNewFile *.py 0r $HOME/.vim/templates/python
 autocmd BufNewFile *.py 3
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
