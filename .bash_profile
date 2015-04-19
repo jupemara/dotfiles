@@ -48,6 +48,12 @@ if [ -e $(brew --prefix nvm)/nvm.sh ]; then
     nvm use v0.10.36
 fi
 
+# initialize rbenv
+if [ -e $(brew --prefix rbenv) ]; then
+    export RBENV_ROOT=$(brew --prefix rbenv)
+    eval "$(rbenv init -)"
+fi
+
 # pyenv
 if [ -e ${BREW_HOME}/bin/pyenv ]; then
     export PATH="/Users/jumpeiarashi/.pyenv/shims:${PATH}"
