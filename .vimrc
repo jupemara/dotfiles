@@ -104,6 +104,10 @@ autocmd BufNewFile,BufRead *.sls set ft=yaml
 autocmd FileType ruby,eruby setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
+" json
+autocmd FileType json set tabstop=2 shiftwidth=2 softtabstop=2
+let g:vim_json_syntax_conceal = 0
+
 " For coffeescript
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
