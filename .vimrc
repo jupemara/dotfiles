@@ -112,4 +112,4 @@ let g:vim_json_syntax_conceal = 0
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
 autocmd QuickFixCmdPost * nested cwindow | redraw! 
-nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+autocmd FileType coffee nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
