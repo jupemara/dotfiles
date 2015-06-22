@@ -38,6 +38,9 @@ Bundle "jQuery"
   " coffee script plugins
 Bundle "kchmck/vim-coffee-script"
 
+  " handlebars plugin
+Bundle "mustache/vim-mustache-handlebars"
+
 " End of Vundle settings
 filetype plugin indent on
 
@@ -84,9 +87,9 @@ autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 "autocmd FileType htmldjango setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 "autocmd FileType htmldjango setl indentexpr=""
 "
-"" For html
-"autocmd FileType html setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
-"autocmd FileType html setl indentexpr=""
+" For html
+autocmd FileType html setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType html setl indentexpr=""
 
 " For javascript
 autocmd FileType javascript setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
