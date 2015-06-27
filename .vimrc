@@ -41,6 +41,9 @@ Bundle "kchmck/vim-coffee-script"
   " handlebars plugin
 Bundle "mustache/vim-mustache-handlebars"
 
+  " less plugin
+Bundle "groenewege/vim-less"
+
 " End of Vundle settings
 filetype plugin indent on
 
@@ -91,6 +94,9 @@ autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType html setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html setl indentexpr=""
 
+" handlebers
+autocmd FileType html.handlebars setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 " For javascript
 autocmd FileType javascript setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
@@ -116,3 +122,6 @@ au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
 autocmd QuickFixCmdPost * nested cwindow | redraw! 
 autocmd FileType coffee nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+
+" For less
+autocmd FileType less setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
