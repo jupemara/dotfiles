@@ -31,7 +31,7 @@ fi
 
 # Use coreutils by brew
 if [ -d ${BREW_HOME}/Cellar/coreutils ]; then
-    export PATH="${BREW_HOME}/Cellar/coreutils/8.23_1/libexec/gnubin":$PATH
+    export PATH="${BREW_HOME}/Cellar/coreutils/8.24/libexec/gnubin":$PATH
 fi
 
 # python virtualenvwrapper
