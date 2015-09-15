@@ -105,9 +105,12 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.mkd,*.markdown setlocal ft=ghmarkdown
 augroup END
+  " Shortcut to open Marked
+noremap <C-w>m :<C-u>silent !open -a Marked "%:p"<CR>
 
 " For salt *.sls
 autocmd BufNewFile,BufRead *.sls set ft=yaml
+autocmd FileType yaml set tabstop=2 shiftwidth=2 softtabstop=2
 
 " For vim-chef
 autocmd FileType ruby,eruby setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
