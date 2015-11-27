@@ -45,7 +45,7 @@ fi
 if [ -e $(brew --prefix nvm)/nvm.sh ]; then
     . $(brew --prefix nvm)/nvm.sh
     export NVM_DIR=~/.nvm
-    nvm use v0.10.38
+    nvm use v0.10
 fi
 
 # initialize rbenv
