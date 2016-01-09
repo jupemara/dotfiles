@@ -1,48 +1,51 @@
-" For Vundle settings
-set nocompatible
-filetype off
+" Start NeoVundle settings
+if &compatible
+  set nocompatible
+endif
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" self
-Bundle 'gmarik/vundle'
+NeoBundleFetch 'Shougo/neovundle'
 
 " Vundle Install
-Bundle 'SuperTab'
+NeoBundle 'SuperTab'
 
 " github plugin
   " vim plugins
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'tpope/vim-markdown'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'elzr/vim-json'
-Bundle 'LeafCage/yankround.vim'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'jtratner/vim-flavored-markdown'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'LeafCage/yankround.vim'
 
   " python plugins
-Bundle 'JumpeiArashi/jedi-vim'
-Bundle 'The-NERD-tree'
-Bundle 'python.vim'
-Bundle 'vim-flake8'
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'python.vim'
+NeoBundle 'vim-flake8'
 
   " ruby(chef) plugins
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "vadv/vim-chef"
+NeoBundle "MarcWeber/vim-addon-mw-utils"
+NeoBundle "tomtom/tlib_vim"
+NeoBundle "garbas/vim-snipmate"
+NeoBundle "vadv/vim-chef"
 
   " javascript plugins
-Bundle "jelera/vim-javascript-syntax"
-Bundle "jQuery"
+NeoBundle "jelera/vim-javascript-syntax"
+NeoBundle "jQuery"
 
   " coffee script plugins
-Bundle "kchmck/vim-coffee-script"
+NeoBundle "kchmck/vim-coffee-script"
 
   " handlebars plugin
-Bundle "mustache/vim-mustache-handlebars"
+NeoBundle "mustache/vim-mustache-handlebars"
 
   " less plugin
-Bundle "groenewege/vim-less"
+NeoBundle "groenewege/vim-less"
+
+call neobundle#end()
+filetype plugin indent on
 
 " End of Vundle settings
 filetype plugin indent on
