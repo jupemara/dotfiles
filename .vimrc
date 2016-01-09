@@ -25,12 +25,6 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'python.vim'
 NeoBundle 'vim-flake8'
 
-  " ruby(chef) plugins
-NeoBundle "MarcWeber/vim-addon-mw-utils"
-NeoBundle "tomtom/tlib_vim"
-NeoBundle "garbas/vim-snipmate"
-NeoBundle "vadv/vim-chef"
-
   " javascript plugins
 NeoBundle "jelera/vim-javascript-syntax"
 NeoBundle "jQuery"
