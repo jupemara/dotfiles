@@ -61,6 +61,7 @@ set tabstop=4
 set termencoding=utf-8
 set cursorline
 highlight CursorLine term=None cterm=None ctermbg=darkgray ctermfg=None
+inoremap <silent> jj <ESC>
 
 " yankround
 nmap p <Plug>(yankround-p)
