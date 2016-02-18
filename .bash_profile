@@ -58,7 +58,7 @@ fi
 if [ -e ${BREW_HOME}/bin/pyenv ]; then
     export PATH="/Users/jumpeiarashi/.pyenv/shims:${PATH}"
     export PYENV_SHELL=bash
-    source ${CELLAR}/pyenv/20151222/completions/pyenv.bash
+    source ${CELLAR}/pyenv/20160202/completions/pyenv.bash
     pyenv rehash 2>/dev/null
     pyenv() {
         local command
