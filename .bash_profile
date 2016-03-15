@@ -4,7 +4,7 @@ alias "csshx=csshx --ssh_args -A --config ~/.ssh/config"
 
 # Add ssh-key
 eval $(ssh-agent -s)                               >/dev/null 2>&1
-#ssh-add .ssh/IdentityFiles/MY_SSH_PRIVATE_KEY     >/dev/null 2>&1
+#ssh-add ${HOME}/.ssh/IdentityFiles/MY_SSH_PRIVATE_KEY     >/dev/null 2>&1
 
 # bash history
 export HISTSIZE=100000
