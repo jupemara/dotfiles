@@ -4,7 +4,7 @@ alias "csshx=csshx --ssh_args -A --config ~/.ssh/config"
 
 # Add ssh-key
 eval $(ssh-agent -s)                               >/dev/null 2>&1
-#ssh-add ${HOME}/.ssh/IdentityFiles/MY_SSH_PRIVATE_KEY     >/dev/null 2>&1
+ssh-add ${HOME}/.ssh/IdentityFiles/id_rsa      >/dev/null 2>&1
 
 # bash history
 export HISTSIZE=100000
@@ -45,7 +45,7 @@ fi
 if [ -e $(brew --prefix nvm)/nvm.sh ]; then
     . $(brew --prefix nvm)/nvm.sh
     export NVM_DIR=~/.nvm
-    nvm use v4
+    nvm use v6
 fi
 
 # initialize rbenv
