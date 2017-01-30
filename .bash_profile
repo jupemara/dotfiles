@@ -21,7 +21,7 @@ CELLAR=$(brew --cellar)
 
 # bash-completion2
 if [ -d ${CELLAR} ]; then
-    . ${CELLAR}/bash-completion/1.3/etc//bash_completion
+    . ${CELLAR}/bash-completion/1.3_1/etc//bash_completion
 fi
 
 # aws-completion
