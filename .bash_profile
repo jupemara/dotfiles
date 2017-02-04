@@ -19,9 +19,9 @@ fi
 BREW_HOME=$(brew --prefix)
 CELLAR=$(brew --cellar)
 
-# bash-completion2
-if [ -d ${CELLAR} ]; then
-    . ${CELLAR}/bash-completion/1.3_1/etc//bash_completion
+# bash-completion
+if [ -e $(brew --prefix bash-completion) ]; then
+    . "$(brew --prefix bash-completion)/etc/bash_completion"
 fi
 
 # aws-completion
