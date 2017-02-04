@@ -10,14 +10,8 @@ ssh-add ${HOME}/.ssh/IdentityFiles/id_rsa      >/dev/null 2>&1
 export HISTSIZE=100000
 export HISTIGNORE='history:fg*:bg*:pwd'
 
-# set cabal's path
-if [ -e ${HOME}/.cabal/bin ]; then
-    export PATH=${HOME}/.cabal/bin:$PATH
-fi
-
 # set BREW_HOME
 BREW_HOME=$(brew --prefix)
-CELLAR=$(brew --cellar)
 
 # bash-completion
 if [ -e $(brew --prefix bash-completion) ]; then
@@ -55,10 +49,10 @@ if [ -e $(brew --prefix rbenv) ]; then
 fi
 
 # pyenv
-if [ -e ${BREW_HOME}/bin/pyenv ]; then
-    export PATH="/Users/jumpeiarashi/.pyenv/shims:${PATH}"
+if [ -e $(brew --prefix pyen) ]; then
+    export PATH="${HOME}/.pyenv/shims:${PATH}"
     export PYENV_SHELL=bash
-    source ${CELLAR}/pyenv/20160202/completions/pyenv.bash
+    . $(brew --prefix pyenv)/completions/pyenv.bash
     pyenv rehash 2>/dev/null
     pyenv() {
         local command
