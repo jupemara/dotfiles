@@ -30,8 +30,8 @@ if [ -e ${BREW_HOME}/bin/aws_completer ]; then
 fi
 
 # Use coreutils by brew
-if [ -d ${BREW_HOME}/Cellar/coreutils ]; then
-    export PATH="${BREW_HOME}/Cellar/coreutils/8.24/libexec/gnubin":$PATH
+if [ -e $(brew --prefix coreutils) ]; then
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin":$PATH
 fi
 
 # python virtualenvwrapper
