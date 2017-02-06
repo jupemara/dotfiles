@@ -28,6 +28,12 @@ if [ -e $(brew --prefix coreutils) ]; then
     export PATH="$(brew --prefix coreutils)/libexec/gnubin":$PATH
 fi
 
+# goenv
+if [ -e $(brew --prefix goenv) ]; then
+    export GOENVGOROOT=$(brew --prefix goenv)
+    eval "$(goenv init -)"
+fi
+
 # python virtualenvwrapper
 if [ -e ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh ]; then
     . ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh
@@ -49,7 +55,7 @@ if [ -e $(brew --prefix rbenv) ]; then
 fi
 
 # pyenv
-if [ -e $(brew --prefix pyen) ]; then
+if [ -e $(brew --prefix pyenv) ]; then
     export PATH="${HOME}/.pyenv/shims:${PATH}"
     export PYENV_SHELL=bash
     . $(brew --prefix pyenv)/completions/pyenv.bash
