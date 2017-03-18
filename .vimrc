@@ -14,7 +14,6 @@ NeoBundle 'SuperTab'
 " github plugin
   " vim plugins
 NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'LeafCage/yankround.vim'
@@ -84,10 +83,6 @@ autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-"" For htmldjango
-"autocmd FileType htmldjango setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
-"autocmd FileType htmldjango setl indentexpr=""
-"
 " For html
 autocmd FileType html setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html setl indentexpr=""
@@ -105,14 +100,6 @@ augroup markdown
 augroup END
   " Shortcut to open Marked
 noremap <C-w>m :<C-u>silent !open -a Marked "%:p"<CR>
-
-" For salt *.sls
-autocmd BufNewFile,BufRead *.sls set ft=yaml
-autocmd FileType yaml set tabstop=2 shiftwidth=2 softtabstop=2
-
-" For vim-chef
-autocmd FileType ruby,eruby setl autoindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
 " json
 autocmd FileType json set tabstop=2 shiftwidth=2 softtabstop=2
