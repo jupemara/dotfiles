@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles other then `.ssh` directory
+My dotfiles
 
 ## NeoVundle
 
@@ -22,3 +22,20 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 And proceed `prefix + I` on any tmux session to install each plugins
 
+## homebrew
+
+I use [Brewfile](https://github.com/Homebrew/homebrew-bundle)
+
+```bash
+$ cp .brewfile ${HOME}/
+$ brew bundle --file=.brewfile
+```
+
+## restore dotfiles
+
+I use [mackup](https://github.com/lra/mackup).
+
+```bash
+$ cp .mackup.cfg ${HOME}/
+$ mackup restore
+```
