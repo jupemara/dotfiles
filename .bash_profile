@@ -1,6 +1,5 @@
 # Commands Alias
 alias "ssh=ssh -A"
-alias "csshx=csshx --ssh_args -A --config ~/.ssh/config"
 
 # Add ssh-key
 eval $(ssh-agent -s)                               >/dev/null 2>&1
