@@ -1,3 +1,4 @@
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -17,6 +18,7 @@ brew "hub"
 brew "imagemagick"
 brew "jq"
 brew "mackup"
+brew "mas"
 brew "nkf"
 brew "nvm"
 brew "parallel"
@@ -41,6 +43,7 @@ cask "cyberduck"
 cask "docker"
 cask "dropbox"
 cask "firefox"
+cask "google-backup-and-sync"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
@@ -51,8 +54,18 @@ cask "kindle"
 cask "kindle-previewer"
 cask "nordvpn"
 cask "skype"
+cask "slack"
 cask "station"
 cask "transmission"
+cask "visual-studio-code"
 cask "vlc"
 cask "vmware-fusion"
 cask "wireshark"
+mas "1Password", id: 443987910
+mas "BetterSnapTool", id: 417375580
+mas "iStat Menus", id: 1319778037
+mas "LINE", id: 539883307
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Quiver", id: 866773894
+mas "The Unarchiver", id: 425424353
