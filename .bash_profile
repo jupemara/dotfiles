@@ -2,8 +2,8 @@
 alias "ssh=ssh -A"
 
 # Add ssh-key
-eval $(ssh-agent -s)                               >/dev/null 2>&1
-ssh-add ${HOME}/.ssh/IdentityFiles/id_rsa      >/dev/null 2>&1
+eval $(ssh-agent -s)                      >/dev/null 2>&1
+ssh-add ${HOME}/.ssh/IdentityFiles/id_rsa >/dev/null 2>&1
 
 # bash history
 export HISTSIZE=100000
