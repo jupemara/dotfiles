@@ -1,3 +1,6 @@
+# Language specification
+export LANG=C
+
 # Commands Alias
 alias "ssh=ssh -A"
 
