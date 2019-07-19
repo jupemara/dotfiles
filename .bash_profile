@@ -36,6 +36,11 @@ if [ -e $(brew --prefix goenv) ]; then
     eval "$(goenv init -)"
 fi
 
+# kubectl
+if [ -e $(brew --prefix kubectl) ]; then
+    . "$(brew --prefix kubectl)/etc/bash_completion.d/kubectl"
+fi
+
 # python virtualenvwrapper
 if [ -e ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh ]; then
     . ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh
