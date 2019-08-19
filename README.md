@@ -36,6 +36,8 @@ $ brew bundle --file=.brewfile
 I use [mackup](https://github.com/lra/mackup).
 
 ```bash
-$ cp .mackup.cfg ${HOME}/
+$ cp -ar .mackup* ${HOME}/ 
 $ mackup restore
+# after restoreing
+$ rm -r ${HOME}/.mackup*
 ```
