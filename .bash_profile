@@ -1,10 +1,16 @@
 # Language specification
 export LANG=C
 
+# load special environment variables
+
+if [ -f ${HOME}/.env ]; then
+  . ${HOME}/.env
+fi
+
 # Commands Alias
 alias "ssh=ssh -A"
 
-# Add ssh-key
+# launch ssh-agent
 ssh_agent_alias="${HOME}/.ssh/agent"
 if [ -S "${SSH_AUTH_SOCK}" ]; then
     case ${SSH_AUTH_SOCK} in
