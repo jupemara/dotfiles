@@ -103,7 +103,6 @@ fi
 
 # gcloud
 if [ -e "$(brew --prefix)/Caskroom/google-cloud-sdk" ]; then
-    echo 'gcloud'
     prefix="$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
     export PATH="${prefix}/bin":$PATH
     source ${prefix}/completion.bash.inc
