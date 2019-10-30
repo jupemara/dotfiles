@@ -65,6 +65,25 @@
       }]
     }]
   }, {
+    "description": "prevent wrongly command+q",
+    "manipulators": [{
+      "type": "basic",
+      "from": {
+        "key_code": "q",
+        "modifiers": {
+          "mandatory": ["left_command"]
+        }
+      },
+      "parameters": {
+        "basic.to_if_held_down_threshold_milliseconds": 512
+      },
+      "to_if_held_down": [{
+        "key_code": "q",
+        "modifiers": ["command"],
+        "repeat": false
+      }]
+    }]
+  }, {
     "description": "to 40% keyboard",
     "manipulators": [{
       "type": "basic",
