@@ -7,7 +7,7 @@
       "from": {
         "key_code": "caps_lock",
         "modifiers": {
-          "optional": ["left_shift"]
+          "optional": ["any"]
         }
       },
       "to": [{
