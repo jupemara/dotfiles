@@ -285,20 +285,6 @@
       "to": [{
         "key_code": "f10"
       }]
-    }, {
-      "type": "basic",
-      "from": {
-        "key_code": "f7",
-        "modifiers": {
-          "mandatory": [
-            "right_command",
-            "left_shirt"
-          ]
-        }
-      },
-      "to": [{
-        "key_code": "f7"
-      }]
     }]
   }, {
     "description": "left option to EISUU",
@@ -320,6 +306,45 @@
       },
       "to": [{
         "key_code": "japanese_kana"
+      }]
+    }]
+  }, {
+    "description": "like kudox",
+    "manipulators": [{
+      "type": "basic",
+      "from": {
+        "key_code": "s",
+        "modifiers": {
+          "mandatory": ["command"],
+          "optional": ["any"]
+        }
+      },
+      "to": [{
+        "key_code": "quote"
+      }]
+    }, {
+      "type": "basic",
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": ["command"],
+          "optional": ["any"]
+        }
+      },
+      "to": [{
+        "key_code": "grave_accent_and_tilde"
+      }]
+    }, {
+      "type": "basic",
+      "from": {
+        "key_code": "g",
+        "modifiers": {
+          "mandatory": ["command"],
+          "optional": ["any"]
+        }
+      },
+      "to": [{
+        "key_code": "hyphen"
       }]
     }]
   }, {
