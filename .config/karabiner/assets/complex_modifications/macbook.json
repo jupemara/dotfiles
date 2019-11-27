@@ -18,6 +18,17 @@
       }]
     }]
   }, {
+    "description": "left control to option",
+    "manipulators": [{
+      "type": "basic",
+      "from": {
+        "key_code": "left_control"
+      },
+      "to": [{
+        "key_code": "left_alt"
+      }]
+    }]
+  }, {
     "description": "right command hjkl to left down up right arrows",
     "manipulators": [{
       "type": "basic",
