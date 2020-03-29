@@ -14,7 +14,6 @@ brew "coreutils"
 brew "dep"
 brew "docker-completion"
 brew "git"
-brew "goenv"
 brew "graphviz"
 brew "htop"
 brew "hub"
@@ -25,9 +24,7 @@ brew "mackup"
 brew "mas"
 brew "nghttp2"
 brew "nkf"
-brew "nvm"
 brew "parallel"
-brew "pyenv"
 brew "reattach-to-user-namespace"
 brew "stern"
 brew "terraform"
@@ -37,7 +34,7 @@ brew "tor"
 brew "tree"
 brew "vim"
 brew "watch"
-brew "wireshark"
+brew "wireshark", link: false
 brew "zsh-completions"
 brew "heroku/brew/heroku"
 cask "appcleaner"
@@ -74,6 +71,7 @@ cask "wireshark"
 mas "1Password", id: 443987910
 mas "BetterSnapTool", id: 417375580
 mas "iStat Menus", id: 1319778037
+mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
