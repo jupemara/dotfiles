@@ -26,6 +26,21 @@ And proceed `prefix + I` on any tmux session to install each plugins
 
 I use [Brewfile](https://github.com/Homebrew/homebrew-bundle)
 
+### backup
+
+```bash
+$ brew bundle dump --cask --tap --mas
+$ cp ./Brewfile ${PATH_TO_DOTFILES_REPOSITORY}/.brewfile
+```
+
+or
+
+```bash
+$ brew bundle dump --cask --tap --mas --file=${PATH_TO_BREWFILE}
+```
+
+### restore
+
 ```bash
 $ cp .brewfile ${HOME}/
 $ brew bundle --file=.brewfile
