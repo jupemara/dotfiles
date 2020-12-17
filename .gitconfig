@@ -3,7 +3,7 @@
     excludesfile = ~/.gitignore
 
 [user]
-    name = ARASHI, Jumpei
+    name = jupemara
     email = jumpei.arashi@arashike.com
 
 [alias]
@@ -17,3 +17,5 @@
     ui = true
 [pull]
 	ff = only
+[url "ssh://git@github.com/jupemara/"]
+	insteadOf = https://github.com/jupemara/
