@@ -79,6 +79,11 @@ if [ -e "$(brew --prefix)/Caskroom/google-cloud-sdk" ]; then
     source ${prefix}/completion.zsh.inc
 fi
 
+# asdf
+if [ -e $(brew --prefix asdf) ]; then
+    . $(brew --prefix asdf)/asdf.sh
+fi
+
 # Commands Alias in brew
 alias "ls=ls --color=auto"
 alias "ll=ls -lA --color=auto"
