@@ -50,12 +50,6 @@ if [ -e $(brew --prefix coreutils) ]; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin":$PATH
 fi
 
-# goenv
-if [ -e $(brew --prefix goenv) ]; then
-  export GOENVGOROOT=$(brew --prefix goenv)
-  eval "$(goenv init -)"
-fi
-
 # kubectl
 if [ -e $(brew --prefix kubectl) ]; then
   . <(kubectl completion zsh)
@@ -82,6 +76,12 @@ fi
 # asdf
 if [ -e $(brew --prefix asdf) ]; then
   . $(brew --prefix asdf)/asdf.sh
+fi
+
+# golang
+if [ -e $(brew --prefix asdf) ] && [ -e $(asdf where golang) ]; then
+  export GOROOT="$(asdf where golang)/go"
+  export GOPATH="${HOME}/go/$(asdf current golang | awk '{print $2}')"
 fi
 
 # Commands Alias in brew
