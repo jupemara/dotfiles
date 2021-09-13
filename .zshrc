@@ -1,6 +1,9 @@
 # Language specification
 export LANG=C
 
+# prompt
+PROMPT="%DT%* %m:%c $ "
+
 # load special environment variables
 
 if [ -f ${HOME}/.env ]; then
