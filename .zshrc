@@ -2,7 +2,7 @@
 export LANG=C
 
 # prompt
-PROMPT="%DT%* %m:%c $ "
+PROMPT="%m:%c $ "
 
 # load special environment variables
 
@@ -58,11 +58,6 @@ if [ -e $(brew --prefix kubectl) ]; then
   . <(kubectl completion zsh)
 fi
 
-# python virtualenvwrapper
-if [ -e ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh ]; then
-  . ${BREW_HOME}/bin/virtualenvwrapper_lazy.sh
-fi
-
 # anyenv
 if [ -e ${BREW_HOME}/bin/anyenv ]; then
   eval "$(${BREW_HOME}/bin/anyenv init -)"
@@ -85,6 +80,11 @@ fi
 if [ -e $(brew --prefix asdf) ] && [ -e $(asdf where golang) ]; then
   export GOROOT="$(asdf where golang)/go"
   export GOPATH="${HOME}/go/$(asdf current golang | awk '{print $2}')"
+fi
+
+# dot-net-core
+if [ -e $(brew --prefix asdf) ] && [ -e ${HOME}/.asdf/plugins/dotnet-core ]; then
+  . ${HOME}/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
 fi
 
 # Commands Alias in brew
