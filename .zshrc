@@ -2,7 +2,7 @@
 export LANG=C
 
 # prompt
-PROMPT="%m:%c $ "
+PROMPT="%DT%* %m:%c $ "
 
 # load special environment variables
 
