@@ -22,7 +22,7 @@ if [ -S "${SSH_AUTH_SOCK}" ]; then
     ;;
     /private/*/Listeners)
       eval $(ssh-agent -s)                      >/dev/null 2>&1
-      ssh-add ${HOME}/.ssh/IdentityFiles/id_rsa >/dev/null 2>&1
+      ssh-add ${HOME}/.ssh/key/id_rsa >/dev/null 2>&1
     ;;
   esac
 elif [ -S "${ssh_agent_alias}" ]; then
