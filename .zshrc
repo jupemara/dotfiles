@@ -33,7 +33,10 @@ fi
 export HISTSIZE=100000
 export HISTIGNORE='history:fg*:bg*:pwd'
 
-# set BREW_HOME
+# brew
+if [ -e /opt/homebrew/bin ]; then
+  export PATH="/opt/homebrew/bin":$PATH
+fi
 BREW_HOME=$(brew --prefix)
 
 # enable zsh completions
