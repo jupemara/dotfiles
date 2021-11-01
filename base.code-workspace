@@ -1,26 +1,16 @@
 {
-  "folders": [{
-    "path": "./"
-  }],
+  "folders": [
+    {
+      "path": "./"
+    }
+  ],
   "settings": {
     "prettier.configPath": "~/.prettierrc",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
-    "[javascript]": {
-      "editor.tabSize": 2,
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[typescript]": {
-      "editor.tabSize": 2,
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[typescriptreact]": {
-      "editor.tabSize": 2,
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
     "[go]": {
       "editor.formatOnSave": true
     },
