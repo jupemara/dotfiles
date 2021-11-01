@@ -1,0 +1,42 @@
+{
+  "folders": [{
+    "path": "./"
+  }],
+  "settings": {
+    "prettier.configPath": "~/.prettierrc",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "[javascript]": {
+      "editor.tabSize": 2,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+      "editor.tabSize": 2,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+      "editor.tabSize": 2,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[go]": {
+      "editor.formatOnSave": true
+    },
+    "go.useLanguageServer": true,
+    "go.inferGopath": true,
+    "go.gopath": "~/go/1.17.2",
+    "go.goroot": "~/.asdf/installs/golang/1.17.2/go",
+    "go.lintTool": "golint",
+    "gopls": {
+      "experimentalWorkspaceModule": true
+    },
+    "protoc": {
+      "options": [
+        "--proto_path=${env.GOPATH}/src/github.com/jupemara/korekai-da/schema/proto"
+      ]
+    },
+    "vim.hlsearch": true
+  }
+}
