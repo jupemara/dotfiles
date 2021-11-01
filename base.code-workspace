@@ -12,7 +12,7 @@
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
     "[go]": {
-      "editor.formatOnSave": true
+      "editor.defaultFormatter": "golang.go"
     },
     "go.useLanguageServer": true,
     "go.inferGopath": true,
