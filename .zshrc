@@ -37,6 +37,7 @@ export HISTIGNORE='history:fg*:bg*:pwd'
 if [ -e /opt/homebrew/bin ]; then
   export PATH="/opt/homebrew/bin:$PATH"
   export PATH="/opt/homebrew/sbin:$PATH"
+  eval "$(brew shellenv)"
 fi
 BREW_HOME=$(brew --prefix)
 
