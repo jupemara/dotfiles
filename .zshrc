@@ -88,9 +88,9 @@ if [ -e $(brew --prefix asdf) ] && [ -e $(asdf where golang) ]; then
 fi
 
 # dot-net-core
-if [ -e $(brew --prefix asdf) ] && [ -e ${HOME}/.asdf/plugins/dotnet-core ]; then
-  . ${HOME}/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
-fi
+# if [ -e $(brew --prefix asdf) ] && [ -e ${HOME}/.asdf/plugins/dotnet-core ]; then
+#   . ${HOME}/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
+# fi
 
 # Commands Alias in brew
 alias "ls=ls --color=auto"
