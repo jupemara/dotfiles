@@ -11,6 +11,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
+    "javascriptreact.preferences.quoteStyle": "single",
+    "typescriptreact.preferences.quoteStyle": "single",
     "[go]": {
       "editor.defaultFormatter": "golang.go"
     },
