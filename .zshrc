@@ -78,7 +78,8 @@ fi
 
 # asdf
 if [ -e $(brew --prefix asdf) ]; then
-  . $(brew --prefix asdf)/asdf.sh
+  export ASDF_DIR=$(brew --prefix asdf)/libexec
+  . ${ASDF_DIR}/lib/asdf.sh
 fi
 
 # golang
