@@ -7,8 +7,10 @@
   "settings": {
     "prettier.configPath": "~/.prettierrc",
     "editor.formatOnSave": true,
+    "prettier.trailingComma": "all",
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.guides.bracketPairs": true,
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
     "javascriptreact.preferences.quoteStyle": "single",
