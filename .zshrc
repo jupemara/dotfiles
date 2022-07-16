@@ -45,9 +45,6 @@ BREW_HOME=$(brew --prefix)
 autoload -Uz compinit
 compinit
 
-# zsh-completion
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # aws-completion
 if [ -e ${BREW_HOME}/awscli ]; then
   . ${BREW_HOME}/awscli/share/zsh/site-functions/aws_zsh_completer.sh
@@ -79,6 +76,7 @@ fi
 # asdf
 if [ -e $(brew --prefix asdf) ]; then
   . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
   export ASDF_DIR=$(brew --prefix asdf)/libexec
   . ${ASDF_DIR}/lib/asdf.sh
 fi
