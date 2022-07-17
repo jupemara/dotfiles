@@ -20,8 +20,8 @@
     },
     "go.useLanguageServer": true,
     "go.inferGopath": true,
-    "go.gopath": "~/go/1.17.2",
-    "go.goroot": "~/.asdf/installs/golang/1.17.2/go",
+    "go.gopath": "~/go/1.18.4",
+    "go.goroot": "~/.asdf/installs/golang/1.18.4/go",
     "go.lintTool": "golint",
     "gopls": {
       "experimentalWorkspaceModule": true
