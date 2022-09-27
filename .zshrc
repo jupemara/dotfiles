@@ -73,8 +73,8 @@ if [ -e ${BREW_HOME}/bin/anyenv ]; then
 fi
 
 # gcloud
-if [ -e "$(brew --prefix)/Caskroom/google-cloud-sdk" ]; then
-  prefix="$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+if [ -e "${BREW_HOME}/Caskroom/google-cloud-sdk" ]; then
+  prefix="${BREW_HOME}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
   export PATH="${prefix}/bin":$PATH
   source ${prefix}/completion.zsh.inc
 fi
@@ -91,6 +91,11 @@ fi
 if [ -e $(brew --prefix asdf) ] && [ -e $(asdf where golang) ]; then
   export GOROOT="$(asdf where golang)/go"
   export GOPATH="${HOME}/go/$(asdf current golang | awk '{print $2}')"
+fi
+
+# android studio
+if [ -e "${BREW_HOME}/Caskroom/android-studio" ]; then
+  export ANDROID_SDK_ROOT=${HOME}/Library/Android/sdk
 fi
 
 # dot-net-core
