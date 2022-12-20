@@ -60,6 +60,12 @@ if [ -e $(brew --prefix kubectl) ]; then
   . <(kubectl completion zsh)
 fi
 
+# graphviz
+if [ -e $(brew --prefix graphviz) ]; then
+  GRAPHVIZ_DOT=$(which dot)
+fi
+
+
 # anyenv
 if [ -e ${BREW_HOME}/bin/anyenv ]; then
   eval "$(${BREW_HOME}/bin/anyenv init -)"
@@ -75,7 +81,7 @@ fi
 
 # asdf
 if [ -e $(brew --prefix asdf) ]; then
-  . $(brew --prefix asdf)/asdf.sh
+  . $(brew --prefix asdf)/libexec/asdf.sh
   . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
   export ASDF_DIR=$(brew --prefix asdf)/libexec
   . ${ASDF_DIR}/lib/asdf.sh
