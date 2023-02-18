@@ -98,6 +98,11 @@ if [ -e "${BREW_HOME}/Caskroom/android-studio" ]; then
   export ANDROID_SDK_ROOT=${HOME}/Library/Android/sdk
 fi
 
+# java home
+if [ -e $(brew --prefix java) ]; then
+  export JAVA_HOME=$(brew --prefix java)
+fi
+
 # dot-net-core
 # if [ -e $(brew --prefix asdf) ] && [ -e ${HOME}/.asdf/plugins/dotnet-core ]; then
 #   . ${HOME}/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
@@ -106,3 +111,4 @@ fi
 # Commands Alias in brew
 alias "ls=ls --color=auto"
 alias "ll=ls -lA --color=auto"
+alias "gs.=git status ."
