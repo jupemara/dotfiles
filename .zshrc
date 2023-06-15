@@ -84,7 +84,7 @@ if [ -e $(brew --prefix asdf) ]; then
   . $(brew --prefix asdf)/libexec/asdf.sh
   . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
   export ASDF_DIR=$(brew --prefix asdf)/libexec
-  . ${ASDF_DIR}/lib/asdf.sh
+  . ${ASDF_DIR}/asdf.sh
 fi
 
 # golang
@@ -111,4 +111,10 @@ fi
 # Commands Alias in brew
 alias "ls=ls --color=auto"
 alias "ll=ls -lA --color=auto"
+alias "gb=git branch"
+alias "gco=git checkout -b"
 alias "gs.=git status ."
+alias "gd=git diff"
+alias "ga=git add"
+alias "gp=git push"
+alias "gcm=git commit"
