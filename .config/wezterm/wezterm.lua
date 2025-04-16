@@ -38,4 +38,7 @@ config.keys = {
 config.skip_close_confirmation_for_processes_named = {}
 config.window_close_confirmation = 'AlwaysPrompt'
 
+-- bell
+config.audible_bell = 'Disabled'
+
 return config
