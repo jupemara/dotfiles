@@ -6,3 +6,7 @@
 *.swp
 .go-version
 .vscode
+
+# karabiner
+
+.config/karabiner/automatic_backups

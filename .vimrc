@@ -11,5 +11,5 @@ set number
 set expandtab
 set tabstop=2
 set cursorline
-highlight CursorLine term=None cterm=None ctermbg=darkgray ctermfg=None
+highlight CursorLine term=None cterm=None ctermbg=black ctermfg=None
 inoremap <silent> jj <ESC> 
