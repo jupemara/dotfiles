@@ -5,10 +5,12 @@ export LANG=C
 PROMPT="%DT%* %m:%c $ "
 
 # load special environment variables
-
 if [ -f ${HOME}/.env ]; then
   . ${HOME}/.env
 fi
+
+# oh my zsh
+plugins=(asdf)
 
 # Commands Alias
 alias "ssh=ssh -A"
@@ -30,7 +32,7 @@ elif [ -S "${ssh_agent_alias}" ]; then
 fi
 
 # history
-export HISTSIZE=100000
+export HISTSIZE=1000000
 export HISTIGNORE='history:fg*:bg*:pwd'
 
 # brew
@@ -40,10 +42,6 @@ if [ -e /opt/homebrew/bin ]; then
   eval "$(brew shellenv)"
 fi
 BREW_HOME=$(brew --prefix)
-
-# enable zsh completions
-autoload -Uz compinit
-compinit
 
 # aws-completion
 if [ -e ${BREW_HOME}/awscli ]; then
@@ -66,12 +64,6 @@ if [ -e $(brew --prefix graphviz) ]; then
 fi
 
 
-# anyenv
-if [ -e ${BREW_HOME}/bin/anyenv ]; then
-  eval "$(${BREW_HOME}/bin/anyenv init -)"
-  export PATH="$HOME/.anyenv/bin:$PATH"
-fi
-
 # gcloud
 if [ -e "${BREW_HOME}/Caskroom/google-cloud-sdk" ]; then
   prefix="${BREW_HOME}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
@@ -81,10 +73,7 @@ fi
 
 # asdf
 if [ -e $(brew --prefix asdf) ]; then
-  . $(brew --prefix asdf)/libexec/asdf.sh
-  . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
-  export ASDF_DIR=$(brew --prefix asdf)/libexec
-  . ${ASDF_DIR}/asdf.sh
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fi
 
 # golang
@@ -103,10 +92,10 @@ if [ -e $(brew --prefix java) ]; then
   export JAVA_HOME=$(brew --prefix java)
 fi
 
-# dot-net-core
-# if [ -e $(brew --prefix asdf) ] && [ -e ${HOME}/.asdf/plugins/dotnet-core ]; then
-#   . ${HOME}/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
-# fi
+# enable zsh completions
+autoload -Uz compinit
+compinit
+
 
 # Commands Alias in brew
 alias "ls=ls --color=auto"
