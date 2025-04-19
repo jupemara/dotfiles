@@ -1,7 +1,15 @@
 local wezterm = require 'wezterm'
+local mux = wezterm.mux
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
+
+-- startsup
+-- when startup gui, make window maximize
+wezterm.on('gui-startup', function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
 
 -- fonts
 config.color_scheme = 'Solarized Dark (Gogh)'
