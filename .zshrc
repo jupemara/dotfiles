@@ -1,5 +1,6 @@
 # Language specification
 export LANG=C
+export LC_CTYPE=C.UTF-8
 
 # prompt
 PROMPT="%DT%* %m:%c $ "
@@ -107,3 +108,4 @@ alias "gd=git diff"
 alias "ga=git add"
 alias "gp=git push"
 alias "gcm=git commit"
+alias "tmux=tmux -u"

@@ -20,7 +20,7 @@ install tpm
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-And proceed `prefix + I` on any tmux session to install each plugins
+press `prefix + I` on any tmux session to install each plugins. if this command will not work well, instead use `prefix + U`.
 
 ## homebrew
 
