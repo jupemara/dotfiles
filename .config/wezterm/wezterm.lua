@@ -14,10 +14,7 @@ end)
 -- fonts
 config.color_scheme = 'Solarized Dark Higher Contrast (Gogh)'
 config.font = wezterm.font_with_fallback{
-  {
-    family = "HackGen Console NF",
-    assume_emoji_presentation = true,
-  },
+  "HackGen Console NF",
   "JetBrains Mono",
 }
 config.font_size = 15
