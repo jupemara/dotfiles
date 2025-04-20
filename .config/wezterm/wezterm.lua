@@ -12,9 +12,12 @@ wezterm.on('gui-startup', function(cmd)
 end)
 
 -- fonts
-config.color_scheme = 'Solarized Dark (Gogh)'
+config.color_scheme = 'Solarized Dark Higher Contrast (Gogh)'
 config.font = wezterm.font_with_fallback{
-  "HackGen Console NF",
+  {
+    family = "HackGen Console NF",
+    assume_emoji_presentation = true,
+  },
   "JetBrains Mono",
 }
 config.font_size = 15
@@ -27,7 +30,7 @@ config.cursor_blink_rate = 512
 config.default_cursor_style = "BlinkingBlock"
 
 -- background
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.8
 
 -- window
 config.hide_tab_bar_if_only_one_tab = true
