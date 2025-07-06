@@ -5,19 +5,15 @@
     }
   ],
   "settings": {
-    "prettier.configPath": "~/.prettierrc",
+    "workbench.colorTheme": "Solarized Dark",
+    "biome.lsp.bin": "~/.asdf/shims/biome",
     "editor.formatOnSave": true,
-    "prettier.trailingComma": "all",
+    "editor.fontSize": 13,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.guides.bracketPairs": true,
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
-    "javascriptreact.preferences.quoteStyle": "single",
-    "typescriptreact.preferences.quoteStyle": "single",
-    "[go]": {
-      "editor.defaultFormatter": "golang.go"
-    },
     "go.useLanguageServer": true,
     "go.inferGopath": true,
     "go.gopath": "~/go/1.18.4",
