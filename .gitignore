@@ -10,3 +10,7 @@
 # karabiner
 
 .config/karabiner/automatic_backups
+
+# claude
+
+**/.claude/settings.local.json
