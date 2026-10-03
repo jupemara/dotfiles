@@ -23,6 +23,7 @@ persistent-workspaces = [
   "tmp1",
   "tmp2",
   "tmp3",
+  "tmp4",
 ]
 
 # key bindings
@@ -53,6 +54,7 @@ persistent-workspaces = [
   alt-z = 'workspace tmp1'
   alt-x = 'workspace tmp2'
   alt-c = 'workspace tmp3'
+  alt-v = 'workspace tmp4'
   alt-tab = 'workspace-back-and-forth'
   alt-shift-1 = 'move-node-to-workspace work'
   alt-shift-2 = 'move-node-to-workspace movie'
@@ -67,6 +69,7 @@ persistent-workspaces = [
   alt-shift-z = 'move-node-to-workspace tmp1'
   alt-shift-x = 'move-node-to-workspace tmp2'
   alt-shift-c = 'move-node-to-workspace tmp3'
+  alt-shift-v = 'move-node-to-workspace tmp4'
 
   alt-h = 'focus --wrap-around left'
   alt-j = 'focus --wrap-around down'
