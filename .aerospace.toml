@@ -4,6 +4,9 @@ config-version = 2
 start-at-login = true
 auto-reload-config = true
 
+## appearance
+accordion-padding = 17
+
 ## mouse cursor tracking
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']

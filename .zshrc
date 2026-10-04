@@ -18,19 +18,19 @@ alias "ssh=ssh -A"
 
 # launch ssh-agent
 ssh_agent_alias="${HOME}/.ssh/agent"
-if [ -S "${SSH_AUTH_SOCK}" ]; then
-  case ${SSH_AUTH_SOCK} in
-    /var/*/agent.[0-9]*)
-      ln -snf "${SSH_AUTH_SOCK}" $ssh_agent_alias && export SSH_AUTH_SOCK=$ssh_agent_alias
-    ;;
-    /private/*/Listeners)
-      eval $(ssh-agent -s)                      >/dev/null 2>&1
-      ssh-add ${HOME}/.ssh/key/id_rsa >/dev/null 2>&1
-    ;;
-  esac
-elif [ -S "${ssh_agent_alias}" ]; then
-  export SSH_AUTH_SOCK=$ssh_agent_alias
-fi
+case "${SSH_AUTH_SOCK}" in
+  /var/*/agent.[0-9]*)
+    ln -snf "${SSH_AUTH_SOCK}" "${ssh_agent_alias}" && export SSH_AUTH_SOCK="${ssh_agent_alias}"
+  ;;
+  /private/*/Listeners|"")
+    SSH_AUTH_SOCK="${ssh_agent_alias}" ssh-add -l >/dev/null 2>&1
+    if [ $? -eq 2 ]; then
+      eval "$(ssh-agent -s)" >/dev/null && ln -snf "${SSH_AUTH_SOCK}" "${ssh_agent_alias}"
+    fi
+    export SSH_AUTH_SOCK="${ssh_agent_alias}"
+    ssh-add -l >/dev/null 2>&1 || ssh-add "${HOME}/.ssh/key/id_rsa"
+  ;;
+esac
 
 # history
 export HISTSIZE=1000000
