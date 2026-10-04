@@ -1,0 +1,23 @@
+keybind = super+r=reload_config
+theme = Dracula
+
+# fonts
+
+# TODO: そもそもfont どうすんの
+font-family = "HackGen Console NF Regular"
+font-family = "JetBrains Mono"
+font-feature = -calt, -liga, -dlig
+font-size = 13
+
+# background
+background-opacity = 0.85
+
+# sohuld re-consider when using tmux or claude code
+# background-opacity-cells = true
+
+# macos behavior
+macos-window-buttons = hidden
+
+# auto updates
+auto-update = download
+auto-update-channel = stable
