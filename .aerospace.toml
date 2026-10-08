@@ -27,6 +27,8 @@ persistent-workspaces = [
   "tmp2",
   "tmp3",
   "tmp4",
+  "tmp5",
+  "tmp6",
 ]
 
 # key bindings
@@ -40,8 +42,8 @@ persistent-workspaces = [
   ctrl-alt-k = 'focus-monitor right'
   # toggle horizontal / vertical
   alt-slash = 'layout tiles horizontal vertical'
-  # toggle folat / title
-  alt-comma = 'layout accordion horizontal vertical'
+  # toggle tiles / accordion
+  alt-comma = 'layout tiles accordion'
 
   ## workspaces
   alt-1 = 'workspace work'
@@ -54,10 +56,12 @@ persistent-workspaces = [
   alt-8 = 'workspace H'
   alt-9 = 'workspace sns'
   alt-0 = 'workspace ctrl'
-  alt-z = 'workspace tmp1'
-  alt-x = 'workspace tmp2'
-  alt-c = 'workspace tmp3'
-  alt-v = 'workspace tmp4'
+  alt-a = 'workspace tmp1'
+  alt-s = 'workspace tmp2'
+  alt-d = 'workspace tmp3'
+  alt-z = 'workspace tmp4'
+  alt-x = 'workspace tmp5'
+  alt-c = 'workspace tmp6'
   alt-tab = 'workspace-back-and-forth'
   alt-shift-1 = 'move-node-to-workspace work'
   alt-shift-2 = 'move-node-to-workspace movie'
@@ -69,10 +73,12 @@ persistent-workspaces = [
   alt-shift-8 = 'move-node-to-workspace H'
   alt-shift-9 = 'move-node-to-workspace sns'
   alt-shift-0 = 'move-node-to-workspace ctrl'
-  alt-shift-z = 'move-node-to-workspace tmp1'
-  alt-shift-x = 'move-node-to-workspace tmp2'
-  alt-shift-c = 'move-node-to-workspace tmp3'
-  alt-shift-v = 'move-node-to-workspace tmp4'
+  alt-shift-a = 'move-node-to-workspace tmp1'
+  alt-shift-s = 'move-node-to-workspace tmp2'
+  alt-shift-d = 'move-node-to-workspace tmp3'
+  alt-shift-z = 'move-node-to-workspace tmp4'
+  alt-shift-x = 'move-node-to-workspace tmp5'
+  alt-shift-c = 'move-node-to-workspace tmp6'
 
   alt-h = 'focus --wrap-around left'
   alt-j = 'focus --wrap-around down'
@@ -90,3 +96,6 @@ persistent-workspaces = [
   alt-ctrl-down="join-with down"
   alt-ctrl-up="join-with up"
   alt-ctrl-right="join-with right"
+
+  # reset current workspace layout
+  alt-ctrl-r = 'flatten-workspace-tree'
