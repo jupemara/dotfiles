@@ -109,3 +109,8 @@ alias "ga=git add"
 alias "gp=git push"
 alias "gcm=git commit"
 alias "tmux=tmux -u"
+
+# zshrc extra load
+if [ -e "${HOME}/.zshrc_extra" ]; then
+  . "${HOME}/.zshrc_extra"
+fi
