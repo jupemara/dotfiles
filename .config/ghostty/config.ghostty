@@ -21,3 +21,5 @@ macos-window-buttons = hidden
 # auto updates
 auto-update = download
 auto-update-channel = stable
+
+keybind = global:alt+space=toggle_visibility
