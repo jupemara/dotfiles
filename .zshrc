@@ -17,7 +17,7 @@ plugins=(asdf)
 alias "ssh=ssh -A"
 
 # launch ssh-agent
-ssh_agent_alias="${HOME}/.ssh/agent"
+ssh_agent_alias="${HOME}/.ssh/ssh_auth_sock"
 ssh_key="${HOME}/.ssh/key/id_rsa"
 if SSH_AUTH_SOCK="${ssh_agent_alias}" ssh-add -l >/dev/null 2>&1; then
   export SSH_AUTH_SOCK="${ssh_agent_alias}"
