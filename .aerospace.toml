@@ -85,6 +85,10 @@ persistent-workspaces = [
   alt-k = 'focus --wrap-around up'
   alt-l = 'focus --wrap-around right'
 
+  # resize windows in focus
+  alt-shift-equal = 'resize smart +50'
+  alt-minus = 'resize smart -50'
+
   # re-org windows in same workspace
   alt-shift-h = 'move left'
   alt-shift-j = 'move down'
