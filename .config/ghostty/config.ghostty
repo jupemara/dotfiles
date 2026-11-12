@@ -17,6 +17,7 @@ background-opacity = 0.85
 
 # macos behavior
 macos-window-buttons = hidden
+maximize = true
 
 # auto updates
 auto-update = download
